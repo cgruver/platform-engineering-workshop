@@ -140,25 +140,6 @@ spec:
         developerHub:
           name: developer-hub
           namespace: {{ ocp4_workload_platform_engineering_workshop_developer_hub_namespace }}
-          config:
-            backstage:
-              host: backstage-developer-hub-{{ ocp4_workload_platform_engineering_workshop_developer_hub_namespace }}.{{ r_openshift_subdomain }}
-            gitlab:
-              host: {{ ocp4_workload_platform_engineering_workshop_gitlab_config_host }}
-            argocd:
-              host: {{ ocp4_workload_platform_engineering_workshop_rhdh_gitops_name }}-server-{{ ocp4_workload_platform_engineering_workshop_rhdh_gitops_namespace }}.{{ r_openshift_subdomain }}
-            kubernetes:
-              apiUrl: {{ r_openshift_api_server }}
-            keycloak:
-              host: {{ ocp4_workload_platform_engineering_workshop_rhbk_host }}.{{ r_openshift_subdomain }}
-              realm: {{ ocp4_workload_platform_engineering_workshop_rhbk_realm_backstage_name }}
-              loginRealm: {{ ocp4_workload_platform_engineering_workshop_rhbk_realm_backstage_name }}
-          application:
-            git:
-              host: {{ ocp4_workload_platform_engineering_workshop_developer_hub_config_git_host }}
-              group: {{ ocp4_workload_platform_engineering_workshop_developer_hub_config_git_group }}
-              repo: {{ ocp4_workload_platform_engineering_workshop_developer_hub_config_git_repo }}
-              revision: {{ ocp4_workload_platform_engineering_workshop_developer_hub_config_git_revision }}
 
         rhdhGitops:
           name: {{ ocp4_workload_platform_engineering_workshop_rhdh_gitops_name }}
