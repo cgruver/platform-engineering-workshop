@@ -31,7 +31,6 @@ The role deploys and configures the following components:
 - **Parasol** - Demo application for workshop scenarios
 - **Orchestrator** - Workflow orchestration for RHDH
 - **Showroom** - Workshop content delivery platform
-- **Web Terminal** - Browser-based terminal access (optional)
 
 ## Quick Start
 
@@ -61,7 +60,6 @@ The role provides extensive configuration options through variables. Key variabl
 - `ACTION` - Set to `provision` or `destroy`
 - `common_password` - Default password for workshop users
 - `ocp4_workload_platform_engineering_workshop_noobaa_install` - Enable/disable NooBaa installation (default: true)
-- `ocp4_workload_platform_engineering_workshop_terminal_install` - Enable/disable Web Terminal (default: true)
 
 See [defaults/main.yml](roles/ocp4_workload_platform_engineering_workshop/defaults/main.yml) for all available configuration options.
 

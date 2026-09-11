@@ -78,7 +78,6 @@ spec:
 
         openshiftPipelines:
           name: openshift-pipelines
-          namespace: {{ ocp4_workload_platform_engineering_workshop_openshift_pipelines_namespace }}
 
         noobaa:
           enabled: {{ ocp4_workload_platform_engineering_workshop_noobaa_install }}
@@ -201,8 +200,6 @@ spec:
 
         devspaces:
           enabled: {{ ocp4_workload_platform_engineering_workshop_devspaces_install }}
-          name: {{ ocp4_workload_platform_engineering_workshop_devspaces_name }}
-          namespace: {{ ocp4_workload_platform_engineering_workshop_devspaces_namespace }}
 
         rhtas:
           name: {{ ocp4_workload_platform_engineering_workshop_rhtas_application_name }}
