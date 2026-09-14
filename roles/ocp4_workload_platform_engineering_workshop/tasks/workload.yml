@@ -41,10 +41,9 @@
     r_openshift_api_server: "{{ r_api_url.resources[0].status.apiServerURL }}"
 
 # Main workload tasks
-- name: Install OpenShift Gitops
-  when: ocp4_workload_platform_engineering_workshop_openshift_gitops_install | bool
-  ansible.builtin.include_tasks: openshift_gitops.yml
-
+# OpenShift GitOps is now installed by ocp4_workload_openshift_gitops from core_workloads
+# (controlled by ocp4_workload_platform_engineering_workshop_openshift_gitops_install variable)
+# We still retrieve the admin password for user info reporting.
 - name: Retrieve openshift-gitops-cluster secret
   kubernetes.core.k8s_info:
     api_version: "v1"
